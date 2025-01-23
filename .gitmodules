@@ -1,0 +1,3 @@
+[submodule "src/MobileRobotics2025"]
+	path = src/MobileRobotics2025
+	url = https://github.com/kittinook/MobileRobotics2025.git
