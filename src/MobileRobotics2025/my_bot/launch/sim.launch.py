@@ -58,6 +58,11 @@ def generate_launch_description():
     	executable="diff_drive.py"
     )
     
+    point_to_point_controller = Node(
+        package="my_controller",
+        executable="point_to_point_controller.py"
+    )
+
     joint_state_broadcaster_spawner = Node(
         package="controller_manager",
         executable="spawner",
@@ -106,5 +111,6 @@ def generate_launch_description():
     launch_description.add_action(gazebo)
     launch_description.add_action(spawn_entity)
     launch_description.add_action(controller)
+    launch_description.add_action(point_to_point_controller)
     launch_description.add_action(rsp)
     return launch_description
